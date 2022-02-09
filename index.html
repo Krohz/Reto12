@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Cristian Alvias">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Apparel - Krohz</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+</head>
+
+<body>
+    <main class="main contenedor">
+        <div class="main__logo  contenedor">
+            <img src="images/logo.svg" alt="Logo empresa">
+        </div>
+        <div class="main__grid">
+            <div class="main__contenido  contenedor">
+                <h1 class="contenido__titulo">W e ' r e <br><span>c o m i n g <br> s o o n</span></h1>
+                <p class="contenido__texto">Hello fellow shoppers! We're currently building our new fashion store. Add
+                    your email below to stay up-to-date with announcements and our launch deals.</p>
+                <form id="enviar-mail" class="input">
+                    <input class="input__email" type="email" placeholder="Email Adress" id="email">
+                    <input class="input__submit" type="submit" value=">" id="submit"
+                        onclick="validarCorreo(form.email.value)">
+                </form>
+            </div>
+
+            <div class="main__hero"">
+            <img src="" alt="">
+            </div>
+        </div>
+    </main>
+
+    <p class=" autor">Challenge by Frontend Mentor. Coded by Cristian Alvias</p>
+                <script>
+                    function validarCorreo(correo) {
+                        boton = document.querySelector(".input__email");
+                        let er =
+                            /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+                        let esValido = er.test(correo);
+                        if (esValido) {
+                            boton.classList.add("bueno");
+                        } else {
+                            boton.classList.add("error");
+                        }
+                    }
+                </script>
+</body>
+
+</html>
